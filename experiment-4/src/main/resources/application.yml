@@ -1,0 +1,14 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+logging:
+  level:
+    sql: debug
+    com:
+      example: debug
+
+  pattern:
+    console: '%-5level %C.%M[%line] - %msg%n'
+
+my:
+  secretary: Saber

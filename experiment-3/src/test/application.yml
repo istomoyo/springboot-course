@@ -1,0 +1,17 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null # 序列化时忽略空属性值
+  servlet:
+    multipart:
+      max-file-size: -1 # 单文件下载大小限制
+      max-request-size: -1 # 单文件上传大小限制
+
+logging:
+  level:
+    root: warn
+    org.example: debug
+  pattern:
+    console: '%-5level %C.%M[%line] - %msg%n'
+
+my:
+  secretkey: R28K42ZEJ8LWRHU5

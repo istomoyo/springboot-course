@@ -1,0 +1,59 @@
+###错误
+POST localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "account": "admin",
+  "password": "adfdf"
+}
+
+
+###正确
+POST localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "account": "admin",
+  "password": "admin"
+}
+
+
+###
+POST localhost:8080/api/admin/users
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMzA3MjU0MjY3ODAwMzI2MTQ0Iiwicm9sZSI6IjA3dEIiLCJpYXQiOjE3MzE3NDQ0MjIsImV4cCI6MTczMTgzMDgyMn0.C1C9mDrY5vwdLJ4wHVysp8YlCHGLqInRZBevKNXZYr0
+role: 07tB
+Content-Type: application/json
+
+
+{
+  "name": "BO",
+  "account": "1001",
+  "role": "Uim5"
+}
+
+###BO登录
+POST localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "account": "1001",
+  "password": "1001"
+}
+
+
+
+###更改密码
+PATCH localhost:8080/api/user/password
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiVWltNSIsInVpZCI6IjEzMDcyNzg1NDI3NTgzNTA4NDgiLCJpYXQiOjE3MzE3NTAzOTEsImV4cCI6MTczMTgzNjc5MX0.4Tx-kDpWtZLVPlCj1I4xfxD8Yy5qz5SVhJLSHefz8bE
+Content-Type: application/json
+
+{
+  "password": "8888"
+}
+
+
+
+###重置
+PUT localhost:8080/api/admin/users/1001/password
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxMzA3MjU0MjY3ODAwMzI2MTQ0Iiwicm9sZSI6IjA3dEIiLCJpYXQiOjE3MzE3NDQ0MjIsImV4cCI6MTczMTgzMDgyMn0.C1C9mDrY5vwdLJ4wHVysp8YlCHGLqInRZBevKNXZYr0
+

@@ -1,0 +1,25 @@
+###成功 admin
+POST localhost:8080/api/login
+Content-Type: application/json
+
+
+{
+"account":"1001",
+"password":"123456"
+}
+
+###成功 user
+POST localhost:8080/api/login
+Content-Type: application/json
+
+
+{
+  "account":"8008",
+  "password":"123456"
+}
+
+
+###登录 冒充admin
+POST localhost:8080/api/login
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoic2FrYWdhbWkiLCJ1aWQiOiIxIiwiaWF0IjoxNzMxNjgwMTA5LCJleHAiOjE3MzE3NjY1MDl9.pLFUKQtMNCg8SyKN2xWdfQXhVNYU3krIwzXJPvolX1I
